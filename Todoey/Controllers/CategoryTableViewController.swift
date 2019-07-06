@@ -22,6 +22,8 @@ class CategoryTableViewController: SwipeTableViewController {
 
         loadCategories()
         
+        tableView.separatorStyle = .none
+        
     }
     
     //TableView datasource methods
@@ -36,10 +38,18 @@ class CategoryTableViewController: SwipeTableViewController {
         
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
-        cell.textLabel?.text = categories?[indexPath.row].name ?? "No Categories added yet."
-        
-        cell.backgroundColor = UIColor.randomFlat
-        
+        if let category = categories?[indexPath.row] {
+            
+            cell.textLabel?.text = category.name
+            
+            guard let categoryColour = UIColor(hexString: category.colourCategory) else { fatalError()}
+            
+            cell.backgroundColor = categoryColour
+            
+            cell.textLabel?.textColor = ContrastColorOf(categoryColour, returnFlat: true)
+            
+        }
+  
         return cell
         
     }
@@ -55,6 +65,7 @@ class CategoryTableViewController: SwipeTableViewController {
         let action = UIAlertAction(title: "Add", style: .default) { (action) in
             let newCategory = Category()
             newCategory.name = textField.text!
+            newCategory.colourCategory = UIColor.randomFlat.hexValue()
             self.save(category: newCategory)
         }
         
