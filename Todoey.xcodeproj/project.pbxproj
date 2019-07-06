@@ -10,6 +10,7 @@
 		0834ED69DE4DABE32D6995D6 /* Pods_Todoey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC40C46A183A1636D48A3F9 /* Pods_Todoey.framework */; };
 		1110C6C422CFC83500166D3C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1110C6C322CFC83500166D3C /* Item.swift */; };
 		1110C6C622CFC84600166D3C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1110C6C522CFC84600166D3C /* Category.swift */; };
+		114D458B22D0EB9D000AC087 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D458A22D0EB9D000AC087 /* SwipeTableViewController.swift */; };
 		11A492F622CE5B67000DB87A /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A492F522CE5B67000DB87A /* CategoryTableViewController.swift */; };
 		11CEBB5C22CCDCB100B16FFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CEBB5B22CCDCB100B16FFB /* AppDelegate.swift */; };
 		11CEBB5E22CCDCB100B16FFB /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CEBB5D22CCDCB100B16FFB /* TodoListViewController.swift */; };
@@ -22,6 +23,7 @@
 		03FAB0F234C668C3D680E44A /* Pods-Todoey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todoey.release.xcconfig"; path = "Target Support Files/Pods-Todoey/Pods-Todoey.release.xcconfig"; sourceTree = "<group>"; };
 		1110C6C322CFC83500166D3C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		1110C6C522CFC84600166D3C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		114D458A22D0EB9D000AC087 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		11A492F522CE5B67000DB87A /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		11CEBB5822CCDCB100B16FFB /* Todoey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todoey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11CEBB5B22CCDCB100B16FFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				11A492F522CE5B67000DB87A /* CategoryTableViewController.swift */,
 				11CEBB5D22CCDCB100B16FFB /* TodoListViewController.swift */,
+				114D458A22D0EB9D000AC087 /* SwipeTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -207,15 +210,19 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Todoey/Pods-Todoey-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -255,6 +262,7 @@
 				11CEBB5E22CCDCB100B16FFB /* TodoListViewController.swift in Sources */,
 				11CEBB5C22CCDCB100B16FFB /* AppDelegate.swift in Sources */,
 				11A492F622CE5B67000DB87A /* CategoryTableViewController.swift in Sources */,
+				114D458B22D0EB9D000AC087 /* SwipeTableViewController.swift in Sources */,
 				1110C6C622CFC84600166D3C /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
